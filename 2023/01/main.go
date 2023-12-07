@@ -74,6 +74,6 @@ func calulateCalibration(data *bufio.Scanner) int{
 
 func main() {
     data := getData()
-    digit := calulateCalibration(data)
-    fmt.Println(digit)
+    answer := calulateCalibration(data)
+    fmt.Println("The answer for day 01 is:", answer)
 }
