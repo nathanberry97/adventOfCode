@@ -1,7 +1,4 @@
-#!/usr/bin/env python3
-
-
-from typing_extensions import List
+#!/usr/bin/env python3.11
 
 
 def main():
@@ -15,7 +12,7 @@ def main():
     print('Similarity:', similarity)
 
 
-def similarityScore(l: List[int], r: List[int]) -> int:
+def similarityScore(l: list[int], r: list[int]) -> int:
     checkedLeft, score = {}, 0
 
     for val in l:
@@ -31,7 +28,7 @@ def similarityScore(l: List[int], r: List[int]) -> int:
     return score
 
 
-def getDistance(l: List[int], r: List[int]) -> int:
+def getDistance(l: list[int], r: list[int]) -> int:
     total = 0
 
     for index in range(len(l)):
@@ -43,17 +40,17 @@ def getDistance(l: List[int], r: List[int]) -> int:
     return total
 
 
-def getInput(input: List[str]) -> tuple[List[int], List[int]]:
+def getInput(input: list[str]) -> tuple[list[int], list[int]]:
     arrayLeft, arrayRight = [], []
     for val in input:
         if val != '':
-            arrayLeft.append(int(val.split(' ')[0]))
-            arrayRight.append(int(val.split(' ')[3]))
+            arrayLeft.append(int(val.split('-')[0]))
+            arrayRight.append(int(val.split('-')[1]))
 
     return mergeSort(arrayLeft), mergeSort(arrayRight)
 
 
-def mergeSort(input: List[int]) -> List[int]:
+def mergeSort(input: list[int]) -> list[int]:
     if len(input) <= 1:
         return input
 
@@ -64,7 +61,7 @@ def mergeSort(input: List[int]) -> List[int]:
     return merge(left, right)
 
 
-def merge(left: List[int], right: List[int]) -> List[int]:
+def merge(left: list[int], right: list[int]) -> list[int]:
     result = []
     leftIndex = rightIndex = 0
 
