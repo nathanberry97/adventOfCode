@@ -23,7 +23,7 @@ def partOne(data: list[str]) -> int:
 
 
 def partTwo(data: str, digitsPattern: str) -> int:
-    enabled, valid_mul = True, []
+    enabled, validMul = True, []
     dontPattern = r"don't\(\)"
     doPattern = r"do\(\)"
 
@@ -35,9 +35,9 @@ def partTwo(data: str, digitsPattern: str) -> int:
         elif regEx.fullmatch(dontPattern, section):
             enabled = False
         elif enabled:
-            valid_mul.extend(regEx.findall(digitsPattern, section))
+            validMul.extend(regEx.findall(digitsPattern, section))
 
-    return(partOne(valid_mul))
+    return(partOne(validMul))
 
 
 if '__main__' == __name__:
