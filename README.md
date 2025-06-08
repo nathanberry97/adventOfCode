@@ -7,7 +7,7 @@ This repo is intended to store my solutions for AoC:
 ## 2015
 
 For [AoC 2015](https://adventofcode.com/2015) I will be attempting to answer each
-day using JavaScript.
+day using Lua.
 
 ## 2023
 
