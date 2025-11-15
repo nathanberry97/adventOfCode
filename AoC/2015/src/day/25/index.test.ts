@@ -1,7 +1,7 @@
 import { describe, it, expect } from 'vitest';
-import { solution } from './<%= day %>';
+import { solution } from './index';
 
-describe('Day <%= day %>', () => {
+describe('Day 25', () => {
     it('works with sample input', () => {
         const input = 'sample input';
         expect(solution(input)).toBe(input);
