@@ -1,0 +1,11 @@
+{
+  "name": "@aoc/utils",
+  "sourceRoot": "libs/utils/src",
+  "projectType": "library",
+  "targets": {
+    "test": {
+      "executor": "@nx/vite:test",
+      "options": {}
+    }
+  }
+}

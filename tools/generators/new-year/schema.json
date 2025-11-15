@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-schema.org/schema",
+  "$id": "NewYear",
+  "cli": "nx",
+  "title": "Create new year",
+  "type": "object",
+  "properties": {
+    "year": {
+      "type": "number"
+    }
+  },
+  "required": ["year"]
+}

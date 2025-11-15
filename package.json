@@ -1,0 +1,32 @@
+{
+  "name": "adventofcode",
+  "version": "1.0.0",
+  "description": "This repo is intended to store my solutions for AoC:",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nathanberry97/adventOfCode.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nathanberry97/adventOfCode/issues"
+  },
+  "homepage": "https://github.com/nathanberry97/adventOfCode#readme",
+  "devDependencies": {
+    "@nx/esbuild": "^22.0.3",
+    "@nx/js": "^22.0.3",
+    "@nx/vite": "^22.0.3",
+    "@nx/workspace": "^22.0.3",
+    "@types/node": "^24.10.1",
+    "nx": "^22.0.3",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3",
+    "vite": "^6.0.7",
+    "vitest": "^4.0.9"
+  }
+}

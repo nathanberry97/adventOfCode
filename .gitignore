@@ -1,0 +1,8 @@
+# Node
+node_modules/
+
+# Nx build output
+build/
+
+# Nx cache
+.nx/

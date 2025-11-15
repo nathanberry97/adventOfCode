@@ -1,0 +1,6 @@
+{
+  "name": "@aoc/generators",
+  "version": "0.0.0",
+  "private": true,
+  "generators": "./generators.json"
+}
