@@ -1,0 +1,38 @@
+{
+  "name": "aoc-2015",
+  "sourceRoot": "AoC/2015/src",
+  "projectType": "application",
+  "targets": {
+    "build": {
+      "executor": "@nx/esbuild:esbuild",
+      "outputs": [
+        "{workspaceRoot}/build/AoC/2015"
+      ],
+      "options": {
+        "outputPath": "build/AoC/2015",
+        "format": [
+          "cjs"
+        ],
+        "bundle": true,
+        "platform": "node",
+        "main": "AoC/2015/src/main.ts",
+        "tsConfig": "AoC/2015/tsconfig.json",
+        "minify": false,
+        "assets": [
+          {
+            "input": "AoC/2015/src",
+            "glob": "**/input.txt",
+            "output": "."
+          }
+        ]
+      }
+    },
+    "test": {
+      "executor": "@nx/vite:test",
+      "options": {
+        "config": "AoC/2015/vitest.config.ts",
+        "passWithNoTests": true
+      }
+    }
+  }
+}
