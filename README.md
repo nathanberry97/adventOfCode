@@ -1,20 +1,45 @@
-# adventOfCode
+# Advent of Code
 
-This repo is intended to store my solutions for AoC:
+> This is a TypeScript repository using Nx to store my
+> [Advent of Code](https://adventofcode.com/) solutions.
 
-- [Advent of code](https://adventofcode.com)
+## About
 
-## 2015
+Advent of Code is an annual set of Christmas-themed programming challenges that
+can be solved in any programming language.
+This repository contains my solutions implemented in TypeScript, organized
+using the Nx monorepo tool.
 
-For [AoC 2015](https://adventofcode.com/2015) I will be attempting to answer each
-day using Lua.
+## Prerequisites
 
-## 2023
+- Node.js (v18 or higher recommended)
+- npm
 
-For [AoC 2023](https://adventofcode.com/2023) I will be attempting to answer each
-day using Go, I'll only be getting the first star on each of my solutions.
+## Getting Started
 
-## 2024
+1. Clone the repository
+2. Install dependencies: `make init`
 
-For [AoC 2024](https://adventofcode.com/2024) I will be attempting to answer each
-day using python.
+## Project Structure
+
+The repository is organized as an Nx workspace with the following structure:
+
+- `AoC/` - Contains yearly projects with solutions for each day
+- `libs/` - Shared utilities and helper functions
+- `tools/` - Custom Nx generators and tooling
+- Project naming convention: `aoc-<year>` (e.g., `aoc-2023`)
+
+## Available `make` commands:
+
+```txt
+Advent of Code
+
+Usage:
+  init                  Initialise the project: install node dependencies
+  test                  Test a specific project: make test PROJECT=<project-name>
+  build                 Build a specific project: make build PROJECT=<project-name>
+  run                   Run a specific project: make run PROJECT=<project-name>
+  generate-new-year     Generate a new year: make new-year YEAR=<year>
+  list-aoc              List AoC projects in this repo
+  clean                 Remove build output and Nx cache
+```

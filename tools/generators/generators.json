@@ -1,0 +1,9 @@
+{
+  "generators": {
+    "new-year": {
+      "factory": "./new-year",
+      "schema": "./new-year/schema.json",
+      "description": "Generate a new AoC year project"
+    }
+  }
+}
