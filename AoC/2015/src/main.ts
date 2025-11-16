@@ -43,6 +43,21 @@ function runDay(day: number) {
     console.log(`Day ${dayStr} answer:`, dayModule.solution(input));
 }
 
-for (let d = 1; d <= 25; d++) {
-    runDay(d);
+// Parse command line arguments
+const args = process.argv.slice(2);
+const dayArg = args.find(arg => arg.startsWith('--day='));
+
+if (!dayArg) {
+    console.error('Error: --day parameter is required');
+    console.error('Usage: node main.cjs --day=<1-25>');
+    process.exit(1);
 }
+
+const specificDay = parseInt(dayArg.split('=')[1]);
+
+if (isNaN(specificDay) || specificDay < 1 || specificDay > 25) {
+    console.error('Error: Day must be a number between 1 and 25');
+    process.exit(1);
+}
+
+runDay(specificDay);
