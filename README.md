@@ -35,11 +35,11 @@ The repository is organized as an Nx workspace with the following structure:
 Advent of Code
 
 Usage:
-  init                  Initialise the project: install node dependencies
-  test                  Test a specific project: make test PROJECT=<project-name>
-  build                 Build a specific project: make build PROJECT=<project-name>
-  run                   Run a specific project: make run PROJECT=<project-name>
-  generate-new-year     Generate a new year: make new-year YEAR=<year>
-  list-aoc              List AoC projects in this repo
-  clean                 Remove build output and Nx cache
+  init                  Initialise the project: install node dependencies
+  test                  Test a specific project: make test PROJECT=<project-name> DAY=<day>
+  build                 Build a specific project: make build PROJECT=<project-name>
+  run                   Run a specific project: make run PROJECT=<project-name> DAY=<day>
+  generate-new-year     Generate a new year: make new-year YEAR=<year>
+  list-aoc              List AoC projects in this repo
+  clean                 Remove build output and Nx cache
 ```

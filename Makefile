@@ -10,13 +10,17 @@ init: ## Initialise the project: install node dependencies
 	@npm ci
 
 .PHONY: test
-test: ## Test a specific project: make test PROJECT=<project-name>
+test: ## Test a specific project: make test PROJECT=<project-name> DAY=<day>
 	@if [ -z "$(PROJECT)" ]; then \
 		echo "Error: PROJECT variable not set."; \
 		exit 1; \
     fi
-	@echo "Testing $(PROJECT)"
-	@npx nx test $(PROJECT) -- --reporter=verbose --watch
+	@if [ -z "$(DAY)" ]; then \
+		echo "Error: DAY variable not set."; \
+		exit 1; \
+    fi
+	@echo "Testing $(PROJECT) for day $(DAY)"
+	@DAY=$(DAY) npx nx test $(PROJECT) -- --reporter=verbose --watch
 
 .PHONY: build
 build: ## Build a specific project: make build PROJECT=<project-name>
@@ -27,13 +31,17 @@ build: ## Build a specific project: make build PROJECT=<project-name>
 	@npx nx build $(PROJECT) --silent > /dev/null 2>&1
 
 .PHONY: run
-run: build ## Run a specific project: make run PROJECT=<project-name>
+run: build ## Run a specific project: make run PROJECT=<project-name> DAY=<day>
 	@if [ -z "$(PROJECT)" ]; then \
 		echo "Error: PROJECT variable not set."; \
 		exit 1; \
     fi
-	@echo "Running $(PROJECT)"
-	@node build/AoC/$$(echo $(PROJECT) | sed 's/aoc-//g')/main.cjs
+	@if [ -z "$(DAY)" ]; then \
+		echo "Error: DAY variable not set."; \
+		exit 1; \
+    fi
+	@echo "Running $(PROJECT) for day $(DAY)"
+	@node build/AoC/$$(echo $(PROJECT) | sed 's/aoc-//g')/main.cjs --day=$(DAY)
 
 .PHONY: generate-new-year
 generate-new-year: ## Generate a new year: make new-year YEAR=<year>

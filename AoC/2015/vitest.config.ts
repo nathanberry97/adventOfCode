@@ -4,6 +4,8 @@ export default defineConfig({
   test: {
     globals: true,
     environment: 'node',
-    include: ['src/**/*.test.ts'],
+    include: process.env.DAY 
+      ? [`src/day/${process.env.DAY.padStart(2, '0')}/**/*.test.ts`]
+      : ['src/**/*.test.ts'],
   },
 });
