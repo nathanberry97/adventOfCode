@@ -40,7 +40,6 @@ run: build ## Run a specific project: make run PROJECT=<project-name> DAY=<day>
 		echo "Error: DAY variable not set."; \
 		exit 1; \
     fi
-	@echo "Running $(PROJECT) for day $(DAY)"
 	@node build/AoC/$$(echo $(PROJECT) | sed 's/aoc-//g')/main.cjs --day=$(DAY)
 
 .PHONY: generate-new-year
