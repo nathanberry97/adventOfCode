@@ -39,7 +39,7 @@ Usage:
   test                  Test a specific project: make test PROJECT=<project-name> DAY=<day>
   build                 Build a specific project: make build PROJECT=<project-name>
   run                   Run a specific project: make run PROJECT=<project-name> DAY=<day>
-  generate-new-year     Generate a new year: make new-year YEAR=<year>
+  generate-new-year     Generate a new year: make generate-new-year YEAR=<year>
   list-aoc              List AoC projects in this repo
   clean                 Remove build output and Nx cache
 ```
