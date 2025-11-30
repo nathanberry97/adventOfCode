@@ -1,0 +1,38 @@
+{
+  "name": "aoc-2025",
+  "sourceRoot": "AoC/2025/src",
+  "projectType": "application",
+  "targets": {
+    "build": {
+      "executor": "@nx/esbuild:esbuild",
+      "outputs": [
+        "{workspaceRoot}/build/AoC/2025"
+      ],
+      "options": {
+        "outputPath": "build/AoC/2025",
+        "format": [
+          "cjs"
+        ],
+        "bundle": true,
+        "platform": "node",
+        "main": "AoC/2025/src/main.ts",
+        "tsConfig": "AoC/2025/tsconfig.json",
+        "minify": false,
+        "assets": [
+          {
+            "input": "AoC/2025/src",
+            "glob": "**/input.txt",
+            "output": "."
+          }
+        ]
+      }
+    },
+    "test": {
+      "executor": "@nx/vite:test",
+      "options": {
+        "config": "AoC/2025/vitest.config.ts",
+        "passWithNoTests": true
+      }
+    }
+  }
+}
